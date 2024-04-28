@@ -1,0 +1,6 @@
+@QuizderFullApp.Server_HostAddress = http://localhost:5252
+
+GET {{QuizderFullApp.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

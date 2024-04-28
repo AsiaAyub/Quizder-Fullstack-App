@@ -1,0 +1,1 @@
+C:\Users\asiay\react native projects\QuizderFullApp\quizderfullapp.client\obj\Debug\quizderfullapp.client.esproj.CoreCompileInputs.cache

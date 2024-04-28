@@ -1,0 +1,162 @@
+[
+    {
+        "id": 0,
+        "question": "I’m taken from a mine and shut up in a wooden case, from which I’m never released, and yet I’m used by almost every person. What am I?",
+        "answers":["Daimond", "Pencil lead/graphite","Wooden box","Papers"],
+        "correct":"Pencil lead/graphite"
+
+
+    },
+    {
+        "id": 1,
+        "question": "Imagine you're in a dark room that is perfectly empty with nothing in it. There are no windows or doors. What is the easiest way to escape?",
+        "answers":["Stop imagining you are in that room", "Die", "Wait", "Dig a hole in the ground with your bare hands"],
+        "correct":"Stop imagining you are in that room"
+
+
+    },
+    {
+        "id": 2,
+        "question": "I am full of holes but can still hold water, what am I?",
+        "answers":["A sponge", "A pot","Abathtub", "A glass"],
+        "correct":"A sponge"
+
+
+    },
+    {
+        "id": 3,
+        "question": "Only one color, but not one size,Stuck at the bottom, yet easily flies,Present in sun, but not in rain,Doing no harm, and feeling no pain.What is it?",
+        "answers":["A cat","A shadow","The moon","The sun"],
+        "correct":"A shadow"
+
+
+    },
+    {
+        "id": 4,
+        "question": "I repeat only the last word your say. The more i repeat, the softer I got. I cannot be seen but can be heard. What am I?",
+        "answers":["Loud voices","An echo","A song","Music"],
+        "correct":"An echo"
+
+
+    },
+    {
+        "id": 5,
+        "question": "What is the difference between yesterday and tomorrow?",
+        "answers":["The unknown","Time","Today","Shadow"],
+        "correct":"Today"
+
+
+    },
+    {
+        "id": 6,
+        "question": "A man rode in town on Tuesday, and left two days later on Tuesday. How so?",
+        "answers":["His legs' name was Tuesday","The time went back on Thursday","He went to China the next day","His horse's name was Tuesday."],
+        "correct":"His horse's name was Tuesday."
+
+
+    },
+    {
+        "id": 7,
+        "question": "I have keys but open no locks. What am I?",
+        "answers":["A frame","A storage box","A piano","A lock"],
+        "correct":"A piano"
+
+
+    },
+    {
+        "id": 8,
+        "question": "I can fly without wings. I can cry without eyes. Whenever I go darkness follows me. What am I?",
+        "answers":["Aghost","A bird","A cloud","A bet"],
+        "correct":"A cloud"
+
+
+    },
+    {
+        "id": 9,
+        "question": "What is boneless but difficult to break?",
+        "answers":["An egg","A worm","A reptile","None of the above"],
+        "correct":"An egg"
+
+
+    },
+    {
+        "id": 10,
+        "question": "On the left side of the road there is a green house, on the right side of the road there is a red house. So, where is the White House?",
+        "answers":["behind the red one","No white house","In Washington","US"],
+        "correct":"In Washington"
+
+
+    },
+    {
+        "id": 11,
+        "question": "I have cities but no houses, forests but no trees, and rivers but no water. What am I? ",
+        "answers":["Mars","Moon","The Map","Desert"],
+        "correct":"The Map"
+
+
+    },
+    {
+        "id": 12,
+        "question": "Which month is the shortest of the year?",
+        "answers":["Febaury","July","May","June"],
+        "correct":"May"
+
+
+    },
+    {
+        "id": 13,
+        "question": "What surrounds the yard without ever getting tired?",
+        "answers":["The kids","The cats","The fence","The trees"],
+        "correct":"The fence"
+
+
+    },
+    {
+        "id": 14,
+        "question": "What has six sides and twenty-one dots, but cannot see?",
+        "answers":["Hexagon","Wooden box","Colored squere","A dice"],
+        "correct":"A dice"
+
+
+    },
+    {
+        "id": 15,
+        "question": "What is something that the more you have of it, the less you can see?",
+        "answers":["The space","The water","The darkness","The light"],
+        "correct":"The darkness"
+
+
+    },
+    {
+        "id": 16,
+        "question": "What do poor people have, rich people need, and if you eat it, you die?",
+        "answers":["Pioson","Nothing","Time","Dirty water"],
+        "correct":"Nothing"
+
+
+    },
+    {
+        "id": 17,
+        "question": "What is the last thing that you will see before everything ends? ",
+        "answers":["The letter g","Light","Sky","What is infront of you"],
+        "correct":"The letter g"
+
+
+    },
+    {
+        "id": 18,
+        "question": "I am something that people make, save, change, and raise. What am I?",
+        "answers":["Food","Houses","Work","Money"],
+        "correct":"Money"
+
+
+    },
+    {
+        "id": 19,
+        "question": "What is something that the person who makes it cannot use, the person who buys it cannot use, and the person who uses it cannot see or feel?",
+        "answers":["Food","Present","Surprise","A coffin"],
+        "correct":"A coffin"
+
+
+    }
+]
