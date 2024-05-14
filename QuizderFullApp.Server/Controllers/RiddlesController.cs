@@ -2,9 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using QuizderFullApp.Server.Data;
+using QuizderFullApp.Server.Helper;
 using QuizderFullApp.Server.Models;
 
 namespace QuizderFullApp.Server.Controllers
@@ -14,44 +17,61 @@ namespace QuizderFullApp.Server.Controllers
     public class RiddlesController : ControllerBase
     {
         private readonly ApplicationDBContext _context;
-        public RiddlesController(ApplicationDBContext context)
+        private readonly UserManager<User> _userManager;
+        public RiddlesController(ApplicationDBContext context, UserManager<User> userManager)
         {
             _context = context;
+            _userManager = userManager;
+
         }
+
+
 
         [HttpGet]
-
-        public IActionResult GetAll()
+        [Authorize]
+        public IActionResult GetAll([FromQuery] QueryObject? query)
         {
-            var riddles = _context.Riddles.ToList();
 
-            return Ok(riddles);
+            if (query == null || string.IsNullOrWhiteSpace(query.SearchTerm))
+            {
+                return Ok(_context.Riddles.ToList());
+            }
+            else
+            {
+                var riddles = _context.Riddles.AsQueryable();
+                riddles = riddles.Where(s => s.Question.Contains(query.SearchTerm));
+                return Ok(riddles.ToList());
+            }
 
         }
 
+
+
         [HttpGet("random")]
+        [Authorize]
         public IActionResult GetRandomRiddles()
         {
-            // Retrieve all riddles from the database
+
             var allRiddles = _context.Riddles.ToList();
 
-            // Ensure that there are at least 5 riddles available
+
             if (allRiddles.Count < 5)
             {
                 return BadRequest("Not enough riddles available to generate random five riddles.");
             }
 
-            // Shuffle the list and take the first 5 riddles
+
             var random = new Random();
 
-            //generate random numbers to be used by orderby to order the riddles then take first 5
             var randomRiddles = allRiddles.OrderBy(r => random.Next()).Take(5);
 
             return Ok(randomRiddles);
         }
 
         [HttpGet("{id:int}")]
+        [Authorize]
 
+        //Task<> is an async operation that eventually returns IActionResult
         public async Task<IActionResult> GetRiddleById(int id)
         {
             var riddle = await _context.Riddles.FindAsync(id);
@@ -66,6 +86,7 @@ namespace QuizderFullApp.Server.Controllers
 
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> CreateRiddle([FromBody] Riddles riddle)
         {
             if (riddle == null)
@@ -90,6 +111,7 @@ namespace QuizderFullApp.Server.Controllers
 
 
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> UpdateRiddle(int id, [FromBody] Riddles updatedRiddle)
         {
             var existingRiddle = await _context.Riddles.FirstOrDefaultAsync(x => x.Id == id);
@@ -115,8 +137,8 @@ namespace QuizderFullApp.Server.Controllers
         }
 
         [HttpDelete]
+        [Authorize]
         [Route("{id:int}")]
-
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
             var toDeleteRiddle = await _context.Riddles.FirstOrDefaultAsync(x => x.Id == id);

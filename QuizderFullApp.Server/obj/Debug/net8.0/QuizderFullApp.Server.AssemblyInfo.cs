@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QuizderFullApp.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0931d3588b526b402c7bd87d75382cb8818b125a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c930e6d751ec546b718612ec69cbc0b68cb1d9f")]
 [assembly: System.Reflection.AssemblyProductAttribute("QuizderFullApp.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QuizderFullApp.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

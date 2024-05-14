@@ -1,11 +1,14 @@
 type scoreCardProps = {
   score: number;
+  userName: string;
 };
 
-const ScoreCard = ({ score }: scoreCardProps) => {
+const ScoreCard = ({ score, userName }: scoreCardProps) => {
   return (
     <div className="text-white lg:w-1/2 lg:mx-44 md:w-1/2 md:mx-44 h-fit mx-14 xl:mx-20 p-4 space-y-10 bg-black bg-opacity-35">
-      <h1 className="font-extrabold text-4xl text-center">Quize Results</h1>
+      <h1 className="font-extrabold text-2xl text-center">
+        {userName}'s Quize Results
+      </h1>
       <img
         src="/assets/images/checkIcon.png"
         className="w-20 h-20 m-auto my-5"
